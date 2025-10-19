@@ -17,6 +17,43 @@ body{
     min-height: 100vh;
 }
 
+.calc{
+    width: 300px;
+    height: 500px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.pantalla{
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    height: 5vh;
+    width: 20vw;
+}
+
+.historial{
+    background-color: white;
+    border-radius: 6px;
+}
+
+.inp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.operaciones{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #historial ol,
 #historial li {
     list-style: none;
