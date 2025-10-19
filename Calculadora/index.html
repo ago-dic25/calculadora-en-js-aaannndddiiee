@@ -10,14 +10,27 @@
         <link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
     </head>
     <body>
-        <input type = "number" id = "num1">
-        <input type = "number" id = "num2">
-        <button id = "suma">+</button>
-        <button id = "resta">-</button>
-        <button id = "mult">x</button>
-        <button id = "dividir">/</button>
-        <h3 id = "resultado"></h3>
-        <div id = "historial"></div>
+        <div class="container">
+            <div class="calc">
+                <div class="inp">
+                    <input type = "number" id = "num1">
+                    <input type = "number" id = "num2">
+                </div>
+                <div class="operaciones">
+                    <button class = "button" id = "suma">+</button>
+                    <button class = "button" id = "resta">-</button>
+                    <button class = "button" id = "mult">x</button>
+                    <button class = "button" id = "dividir">/</button>
+                </div>
+                <div class="resul">
+                    <h3 id = "resultado"></h3>
+                    <div id = "historial">
+                        <h3>Historial:</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <script src = "index.js"></script>
     </body>
 </html>

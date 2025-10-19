@@ -1,7 +1,20 @@
+:root{
+    --background: #e8e8e8;
+}
+
 body{
     font-family: "Homenaje", sans-serif;
     font-weight: 400;
     font-style: normal;
+
+}
+
+.container{
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 #historial ol,
