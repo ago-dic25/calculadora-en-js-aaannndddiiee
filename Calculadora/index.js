@@ -26,41 +26,58 @@ function actualizarHistorial(n1, n2, icon,valor) {
 }
 
 suma.addEventListener("click", function(){
-    const num1 = parseInt(n1.value);
-    const num2 = parseInt(n2.value);
-    r = num1 + num2;
-    res.textContent = r;
-    actualizarHistorial(num1, num2, "+", r);
-    r = 0;
-});
-
-resta.addEventListener("click", function(){
-    const num1 = parseInt(n1.value);
-    const num2 = parseInt(n2.value);
-    r = num1 - num2;
-    res.textContent = r;
-    actualizarHistorial(num1, num2, "-", r);
-    r = 0;
-});
-
-mult.addEventListener("click", function(){
-    const num1 = parseInt(n1.value);
-    const num2 = parseInt(n2.value);
-    r = num1 * num2;
-    res.textContent = r;
-    actualizarHistorial(num1, num2, "*", r);
-    r = 0;
-});
-
-div.addEventListener("click", function(){
-    const num1 = parseInt(n1.value);
-    const num2 = parseInt(n2.value);
-    if(num2 == 0){
-        res.textContent = "NO DIVISION ENTRE 0";
-    }else{
-        r = num1 / num2;
+    if(vacioCampo(n1, n2)){
+        const num1 = parseInt(n1.value);
+        const num2 = parseInt(n2.value);
+        r = num1 + num2;
         res.textContent = r;
-        actualizarHistorial(num1, num2, "/", r);
+        actualizarHistorial(num1, num2, "+", r);
         r = 0;
     }
 });
+
+resta.addEventListener("click", function(){
+    if(vacioCampo(n1, n2)){
+        const num1 = parseInt(n1.value);
+        const num2 = parseInt(n2.value);
+        r = num1 - num2;
+        res.textContent = r;
+        actualizarHistorial(num1, num2, "-", r);
+        r = 0;
+    }
+});
+
+mult.addEventListener("click", function(){
+    if(vacioCampo(n1, n2)){
+        const num1 = parseInt(n1.value);
+        const num2 = parseInt(n2.value);
+        r = num1 * num2;
+        res.textContent = r;
+        actualizarHistorial(num1, num2, "*", r);
+        r = 0;
+    }
+});
+
+div.addEventListener("click", function(){
+    if(vacioCampo(n1, n2)){
+        const num1 = parseInt(n1.value);
+        const num2 = parseInt(n2.value);
+        if(num2 == 0){
+            res.textContent = "NO DIVISION ENTRE 0";
+        }else{
+            r = num1 / num2;
+            res.textContent = r;
+            actualizarHistorial(num1, num2, "/", r);
+            r = 0;
+        }
+    }
+});
+
+function vacioCampo(n1, n2){
+    if(n1.value.length != 0 && n2.value.length != 0){
+        return true;
+    }else{
+        alert("Ingrese valores");
+        return false;
+    }
+}
